@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", "DM Serif Display", Georgia, serif;
+  --font-sans: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Primary Brand Design System Tokens */
+  --color-warm-ivory: #F7F4ED;
+  --color-charcoal: #252822;
+  --color-terracotta: #B75E43;
+  --color-muted-gold: #B89550;
+
+  /* Supporting Surfaces and Tones */
+  --color-warm-sand: #EFEAE1;
+  --color-warm-border: rgba(37, 40, 34, 0.12);
+  --color-arya-navy: #1B2A4A;
+  --color-arya-olive: #5B6E4E;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    background-color: #F7F4ED;
+    color: #252822;
+  }
+
+  body {
+    background-color: #F7F4ED;
+    color: #252822;
+    font-family: var(--font-sans);
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    text-wrap: balance;
+  }
+}
+
+/* Subtle Rajasthani Jaali lattice background texture */
+.bg-jaali-subtle {
+  background-image: radial-gradient(circle at 1px 1px, rgba(184, 149, 80, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.bg-jaali-dark {
+  background-image: radial-gradient(circle at 1px 1px, rgba(184, 149, 80, 0.14) 1px, transparent 0);
+  background-size: 28px 28px;
+}
+
+/* Hairline dividers & borders */
+.border-hairline {
+  border-color: rgba(37, 40, 34, 0.12);
+}
+
+.border-hairline-gold {
+  border-color: rgba(184, 149, 80, 0.35);
+}
+
+/* Standard desktop container max width */
+.container-curated {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .container-curated {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-curated {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F7F4ED;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B89550;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B75E43;
+}
